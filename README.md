@@ -1,4 +1,4 @@
-[README (4).md](https://github.com/user-attachments/files/31828510/README.4.md)
+
 # Quantitative Risk & Portfolio Valuation Engine
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -57,7 +57,7 @@ Given terminal loss distribution $L = -(\Pi_T - \Pi_0)$:
 
 - **Value at Risk ($\text{VaR}_\alpha$):** Quantile cutoff indicating the maximum loss within confidence $\alpha$:
 
-$$\text{VaR}_\alpha(L) = \inf \left\{ l \in \mathbb{R} : P(L > l) \le 1 - \alpha \right\}$$
+$$\text{VaR}_\alpha(L) = \inf [ l \in \mathbb{R} : P(L > l) \le 1 - \alpha ]$$
 
 - **Conditional Value at Risk ($\text{CVaR}_\alpha$ / Expected Shortfall):** Subadditive, coherent risk metric capturing the expected loss given that the VaR threshold has been breached:
 
@@ -87,8 +87,7 @@ $$\text{CVaR}_\alpha(L) = \mathbb{E}[L \mid L \ge \text{VaR}_\alpha(L)]$$
 | **95% Confidence** | **$64,854** (6.49%) | **$110,802** (11.08%) |
 | **99% Confidence** | **$138,679** (13.87%) | **$177,024** (17.70%) |
 
-> **Monotonic Coherence Verified:** $\text{VaR}_{95\%} < \text{CVaR}_{95\%} < \text{VaR}_{99\%} < \text{CVaR}_{99\%}$. Subadditivity is maintained across the entire loss distribution.
-
+> **Monotonic Coherence Verified:** VaR (95%) < CVaR (95%) < VaR (99%) < CVaR (99%). Subadditivity is maintained across the entire loss distribution.
 ---
 
 ## Installation & Environment Setup
@@ -166,7 +165,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ```text
 MIT License
 
-Copyright (c) 2026 Akshat Srivastava
+Copyright (c) 2026 Akshat Raj Patel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -193,7 +192,7 @@ SOFTWARE.
 
 ## Author & Contact
 
-**Akshat Srivastava**
+**Akshat Raj Patel**
 
 - GitHub: [@AKInfinitiX](https://github.com/AKInfinitiX)
 - Repository: [IB_Valuation_Engine](https://github.com/AKInfinitiX/IB_Valuation_Engine)
